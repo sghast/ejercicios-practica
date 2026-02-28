@@ -3,12 +3,8 @@ import random
 punctuation = "!@#$%&"
 universo = string.ascii_uppercase + string.ascii_lowercase + string.digits + punctuation
 
-#se pide la longitud de la contraseña solo por práctica, en un sistema real el usuario no ingresa la longitud
-while True:
-    longitud = int(input("Ingrese la longitud de su contraseña: "))
-    if longitud >= 4: break
-    else:
-        print("La longitud debe ser al menos 4")
+#en un sistema real se define la longitud de la contraseña
+longitud = 8
 
 #obligatorios: asegurar que se tenga al menos una letra, número y símbolo
 obligatorios = []
@@ -30,4 +26,4 @@ random.shuffle(obligatorios)
 for i in obligatorios:
     password += i
 
-print(password)
+print("Tu contraseña es: " + password + "\nNO LA COMPARTAS")
